@@ -1,46 +1,50 @@
-package lecture1;
-
-public class Assignment1 {
+package practiceAssignmentRecap;
+import java.util.Scanner;
+public class Main {
+	static Scanner input = new Scanner (System.in); //practice remembering - static makes it work anywhere
 
 	public static void main(String[] args) {
 		
-		System.out.printf("Number\tSquare\tCube\n");
-		int counter = 1;
-		int counter2 = 1;
-		int counter3 = 1;
 		
+		//2.15 - table of squares and cubes
+		System.out.print("number\tsquare\tcube");
 		
-		
-		//use array???
-		while (counter<=10 && counter2 <=10 && counter3 <=10) {
-			System.out.printf("%d\n",counter);
-			counter++;
+		for(int i= 0; i<=10; i++) {
+			System.out.printf("\n%d\t%d\t%d",i, i*i, i*i*i);
 			
+		}
+		System.out.println("\n"); //spacing
+		//3.5 write a program that uses counter-controlled looping to print the following table of values, separate te columns with tab characters:
+		System.out.print("N\t10*N\t100*N\t1000*N\n");
+		for (int n = 1; n <=5; n++) {
 			
+			System.out.printf("\n%d\t%d\t%d\t%d",n, 10*n, 100*n,1000*n );
+		}
+		
+		//4.9 - triangle printing program: nested for loops
+		System.out.print("\n");
+		//using repeat
+		System.out.print("Enter number of stars: ");
+		int userNum = input.nextInt();
+		//outer
+		for (int rows = 0; rows<=userNum; rows++) {
+			System.out.println("");
+			//inner
+			for (int columns = 0; columns<rows; columns++) {
+				System.out.print("*");
+			}
+			System.out.print(""); //breaking after each iteration
 			
 		}
 		
-		
-		
-		
-		while (counter2<=10) {
-			System.out.printf("\t%d\n",counter2*counter2);
-			counter2++;
-			counter2=counter2;
-		}
-			//Need help adding into same row (array?) as well as looping through all elements and updating value
-		
-		while (counter3<=10) {
-			System.out.printf("\t\t%d\n", counter3*counter3*counter3);
-			counter3++;
-			
-			counter3=counter3*3;
-
-			
+		for (int rows2 = 0; rows2<=userNum; rows2--) {
+			System.out.println("");
+			for (int columns2 = 0; columns2<rows2; columns2++) {
+				System.out.print("*");
+			}
+			System.out.print(""); //breaking after each iteration
 		}
 		
-		
-	
 	}
 
 }
